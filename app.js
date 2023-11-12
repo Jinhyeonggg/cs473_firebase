@@ -378,10 +378,21 @@ async function setTier(userName) {
 }
 const x = new Date().toISOString().split('T')[0]
 
-// signUp("hihihihihihi@gmail.com", "jh31471375@", "anonymous")
+
+// 이미 signup 되어있음
 // signUp("jhjhjhjh@gmail.com", "jh31471375@", "jh")
 // signUp("cmcmcmcmcmcmcm@gmail.com", "jh31471375@", "cm")
 // signUp("jhjhjhjhjhjhjhjh@gmail.com", "jh31471375@", "hj")
+
+
+/*
+테스트 방법
+1. firestore 들어가서
+    - teams collection 전부 삭제
+    - users collection 들어가서 progress, team_refs 필드 삭제
+2. 아래 코드 주석해제하고 실행 (js만 따로 실행하는 법을 몰라서 index.html 새로고침으로 했습니다..)
+*/
+
 // await newTeam("jh", "crazy running", ["rule 1", "rule 2"], "this is crazy running");
 // await newTeam("cm", "extreme running", ["extreme rule 1", "extreme rule 2"], "this is");
 // await newTeam("hj", "running running", ["rule 1", "rule 2"], "hahaha");
@@ -409,10 +420,10 @@ const x = new Date().toISOString().split('T')[0]
 
 // const rankingResult = await ranking('crazy running')
 // console.log(rankingResult)
-const crazyRanking = await getTeamRanking('crazy running');
-const top2Ranking = await getTopNRanking(2);
-console.log(crazyRanking);
-console.log(top2Ranking);
+// const crazyRanking = await getTeamRanking('crazy running');
+// const top2Ranking = await getTopNRanking(2);
+// console.log(crazyRanking);
+// console.log(top2Ranking);
 
 document.getElementById('testButton').addEventListener('click', async ()=>{
     const docName = 'jh';
